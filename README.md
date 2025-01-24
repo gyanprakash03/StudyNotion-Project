@@ -135,3 +135,12 @@ The platform is deployed in the following environment:
 For inquiries, please contact: gyan091203@gmail.com
 
 ---
+
+## Screenshots
+
+![Screenshot1](src/assets/Images/Screenshot%202025-01-24%20191311.png)
+-
+![Screenshot2](src/assets/Images/Screenshot%202025-01-24%20191347.png)
+-
+![Screenshot2](src/assets/Images/Screenshot%202025-01-24%20191439.png)
+-
