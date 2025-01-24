@@ -11,7 +11,8 @@ StudyNotion is a fully functional ed-tech platform designed to provide a seamles
 6. [Deployment](#deployment)  
 7. [Testing](#testing)  
 8. [Future Enhancements](#future-enhancements)  
-9. [Contact](#contact)  
+9. [Contact](#contact)
+10. [Screenshots](#screenshots)
 
 ---
 
