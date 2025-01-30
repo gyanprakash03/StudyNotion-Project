@@ -76,7 +76,7 @@ const Navbar = () => {
                                         ? "translate-y-[15%]"
                                         : "translate-y-[40%]"
                                     }
-                                 top-[50%] z-50 
+                                 top-[50%] z-50
                                 flex flex-col rounded-md bg-richblack-5 p-4 text-richblack-900
                                 opacity-0 transition-all duration-200 group-hover:visible
                                 group-hover:opacity-100 lg:w-[300px]`}
@@ -122,10 +122,8 @@ const Navbar = () => {
 
         {/* Login/SignUp/Dashboard */}
         <div
-          className={`${
-            isMenuOpen
-              ? "fixed top-[210px] right-2 w-[40vw] bg-richblack-800 py-3 px-4 flex rounded-lg z-10 items-start flex-col"
-              : "hidden md:flex"
+          className={`${isMenuOpen
+              ? "fixed top-[212px] right-2 w-[40vw] bg-richblack-800 py-3 px-4 flex rounded-lg z-10 items-start flex-col" : "hidden md:flex"
           } md:flex-row md:relative md:top-0 md:right-0 md:bg-transparent md:p-0 md:w-auto gap-4`}
         >
           {user && user?.accountType != "Instructor" && (
