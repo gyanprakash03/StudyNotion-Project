@@ -12,14 +12,14 @@ import "../../App.css"
 // Icons
 import { FaStar } from "react-icons/fa"
 // Import required modules
-import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules"
+import { Autoplay, FreeMode, Pagination, Scrollbar, Navigation } from "swiper/modules"
 
 // Get apiFunction and the endpoint
 import { apiConnector } from "../../services/apiconnector"
 import { ratingsEndpoints } from "../../services/apis"
 
 function ReviewSlider() {
-  console.log("heeeeeeeeeeellllllllloooooo")
+  // console.log("heeeeeeeeeeellllllllloooooo")
   const [reviews, setReviews] = useState([])
   const truncateWords = 15
 
@@ -40,19 +40,29 @@ function ReviewSlider() {
   return (
     <div className="text-white">
       <div className="my-[50px] h-[184px] max-w-maxContentTab lg:max-w-maxContent">
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={25}
-          loop={true}
-          freeMode={true}
-          autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
-          }}
-          
-          modules={[FreeMode, Pagination, Autoplay]}
-          className="w-full "
-        >
+      <Swiper
+        slidesPerView={1} // Default for mobile
+        spaceBetween={25}
+        loop={true}
+        freeMode={true}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          640: {  // sm breakpoint
+            slidesPerView: 2,
+          },
+          768: {  // md breakpoint
+            slidesPerView: 3,
+          },
+          1024: { // lg breakpoint
+            slidesPerView: 4,
+          }
+        }}
+        modules={[FreeMode, Pagination, Autoplay, Scrollbar]}
+        className="w-full"
+      >
           {reviews.map((review, i) => {
             return (
               <SwiperSlide key={i}>

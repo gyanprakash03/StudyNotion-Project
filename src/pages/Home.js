@@ -13,7 +13,7 @@ import InstructorSection from '../components/core/HomePage/InstructorSection'
 import ExploreMore from '../components/core/HomePage/ExploreMore'
 import ReviewSlider from "../components/common/ReviewSlider"
 const Home = () => {
-    console.log("Printing base url: ",process.env.REACT_APP_BASE_URL);
+    // console.log("Printing base url: ",process.env.REACT_APP_BASE_URL);
   return (
     <div>
         {/* Section1 */}

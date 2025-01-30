@@ -46,10 +46,10 @@ const ViewCourse = () => {
     
   return (
     <>
-        <div className="relative flex min-h-[calc(100vh-3.5rem)]">
+        <div className="relative flex md:flex-row flex-col-reverse pt-8 md:pt-0 min-h-[calc(100vh-3.5rem)]">
             <VideoDetailsSidebar setReviewModal={setReviewModal} />
             <div className="h-[calc(100vh-3.5rem)] flex-1 overflow-auto">
-                <div className="mx-6">
+                <div className="md:mx-6 mx-2 text-center md:text-start">
                 <Outlet />
                 </div>
             </div>

@@ -59,16 +59,16 @@ export default function ChangeProfilePicture() {
   }, [imageFile])
   return (
     <>
-      <div className="flex items-center justify-between rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12 text-richblack-5">
-        <div className="flex items-center gap-x-4">
+      <div className="flex flex-col items-center justify-between gap-6 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6 text-richblack-5 sm:flex-row sm:p-8 sm:px-12">
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
           <img
             src={previewSource || user?.image}
             alt={`profile-${user?.firstName}`}
-            className="aspect-square w-[78px] rounded-full object-cover"
+            className="aspect-square w-16 rounded-full object-cover sm:w-[78px]"
           />
-          <div className="space-y-2">
+          <div className="text-center sm:text-left">
             <p>Change Profile Picture</p>
-            <div className="flex flex-row gap-3">
+            <div className="mt-2 flex flex-col gap-3 sm:flex-row">
               <input
                 type="file"
                 ref={fileInputRef}
@@ -87,14 +87,12 @@ export default function ChangeProfilePicture() {
                 text={loading ? "Uploading..." : "Upload"}
                 onclick={handleFileUpload}
               >
-                {!loading && (
-                  <FiUpload className="text-lg text-richblack-900" />
-                )}
+                {!loading && <FiUpload className="text-lg text-richblack-900" />}
               </IconBtn>
             </div>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
