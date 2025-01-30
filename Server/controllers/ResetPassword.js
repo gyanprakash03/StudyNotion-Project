@@ -33,14 +33,15 @@ exports.resetPasswordToken = async (req,res) => {
                                                     },
                                                     {new:true}) 
 
-       const url = `https://study-notion-frontend-green-ten.vercel.app/update-password/${token}`
+        const frontendUrl = process.env.FRONTEND_URL;
+        const url = `${frontendUrl}/update-password/${token}`;
 
-       await mailSender(email, "Password Reset Link", `Password reset link: ${url}`);
+        await mailSender(email, "Password Reset Link", `Password reset link: ${url}`);
 
-       return res.status(200).json({
-           success:true,
-           message:'Reset link sent'
-       })
+        return res.status(200).json({
+            success:true,
+            message:'Reset link sent'
+        })
    } catch (error) {
         console.log(error);
         return res.status(500).json({
